@@ -1,0 +1,31 @@
+
+/boot/firmware/config.txt
+	Add the following lines to cm4 section:
+		"dtoverlay=dwc2, dr_mode=peripheral"
+/boot/firmware/cmdline.txt
+	Add the following after 'rootwait' in the line:
+		"modules-load=dwc2,g_ether"
+	**NOTE: must stay on same line, can only use spaces and characters**
+
+Reboot Pi
+
+Create new file:
+/etc/netplan/sudo nano 01-netcfg.yaml
+
+Add following code:
+
+network:
+	version:2
+	renderer: networkd
+	ethernets:
+		usb0:
+			dchp4: false
+			optional: true
+			addresses:
+				-	192.168.186.3/24
+
+Ping to confirm port works and is connected to roomba:
+
+ping 192.168.186.2
+
+Navigate to same IP address on Firefox to confirm HTTP connection
