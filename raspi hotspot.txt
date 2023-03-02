@@ -1,0 +1,14 @@
+Setting up hotspot from Pi:
+
+https://ubuntu.com/core/docs/networkmanager/configure-wifi-access-points 
+
+WLAN0 unavailable: therefore, add:
+network:
+  version: 2
+  renderer: NetworkManager
+
+to YAML file in /etc/netplan
+
+Now configure network:
+
+$ nmcli d wifi hotspot ifname wlan0 ssid RasPi_AP password r0b0t2023
