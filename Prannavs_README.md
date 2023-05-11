@@ -1,12 +1,8 @@
-# iRobot Roombda Create3 Demos
+# Steps to get the create_examples_py demos working
 
-# Steps to get the create_examples_py working
-
-## Raspberry Pi Steps
-1. Get a raspberry pi 4
-2. Install Ubuntu 22.04.2 LTS Desktop from the Raspberry Pi Imager (https://www.raspberrypi.com/software/) <img width="564" alt="Screen Shot 2023-05-11 at 1 59 56 PM" src="https://github.com/uwgraphics/create3_examples/assets/71447892/9970da9a-06f6-4ffe-9371-33cfd515e001">
-3. Create a user on your Pi and log in
-4. 
+## Raspberry Pi Steps - Made with the help of Professor Bouchard at Tuft University
+1. Follow these steps https://iroboteducation.github.io/create3_docs/setup/pi4humble/ 
+2. Choose rmw_fast_rtps for your RMW_IMPLEMENTATION 
 
 
 ## Create3 steps
@@ -23,6 +19,6 @@
 10. Wait for the roomba's restart chime
 11. Type in ```ros2 topic list``` and you should see a the Create3's topics
 12. Change lights color with ```ros2 topic pub /cmd_lightring irobot_create_msgs/msg/LightringLeds "{override_system: true, leds: [{red: 255, green: 0, blue: 0}, {red: 0, green: 255, blue: 0}, {red: 0, green: 0, blue: 255}, {red: 255, green: 255, blue: 0}, {red: 255, green: 0, blue: 255}, {red: 0, green: 255, blue: 255}]}"```
-13. More info at https://iroboteducation.github.io/create3_docs/api/ros2/
+13. More info at https://iroboteducation.github.io/create3_docs/api/ros2/ and https://iroboteducation.github.io/create3_docs/hw/rpi_hookup/
 
 
