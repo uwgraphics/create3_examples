@@ -22,3 +22,10 @@
 13. More info at https://iroboteducation.github.io/create3_docs/api/ros2/ and https://iroboteducation.github.io/create3_docs/hw/rpi_hookup/
 
 
+## Importatnt
+- Sometimes even though the roomba and Pi are connected and everything is setup the right way, ```ros2 topic list``` will not show the Create3's topics
+- In this case, connect to ```192.168.186.2``` on your browser (on the Pi), and hover over the Application tab, click on Reboot Robot.
+- Close the browser
+- Optional: in your terminal type ```ros2 daemon stop```
+- Wait for the Roomba to restart
+- Try ```ros2 topic list``` in your terminal again and you should see all the Create3's topics
